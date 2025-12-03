@@ -1,0 +1,12 @@
+.cadre {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    width: fit-content;
+    margin: 20px auto; /* centre horizontalement */
+    border: 2px solid black;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-align: center;
+}
