@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Passer commande — Le Marché</title>
+  <link rel="stylesheet" href="style.css">
   <style>
     :root{
       --primary:#2e8b57;
@@ -21,13 +22,29 @@
       color:#071124;
     }
 
+    /* HEADER + LOGO */
     header{
       background:linear-gradient(90deg,var(--primary),#1e7a4d);
       color:#fff;
-      padding:2rem 1rem;
+      padding:2rem 1rem 2.5rem;
       text-align:center;
-      position:relative; /* permet de positionner le bouton panier */
+      position:relative;
     }
+
+    /* --- GRAND LOGO EN HAUT À GAUCHE --- */
+    .logo{
+      position:absolute;
+      top:20px;
+      left:25px;
+    }
+
+    .logo img{
+      width:130px;       /* ⬅️ GROS LOGO */
+      height:auto;
+      border-radius:10px;
+      object-fit:contain;
+    }
+
     header h1{margin:0;font-size:2rem}
     header p{margin:.4rem 0 0;color:rgba(255,255,255,.95)}
 
@@ -53,47 +70,6 @@
       overflow: hidden;
       clip: rect(0, 0, 0, 0);
       border: 0;
-    }
-
-    /* Bouton panier en haut à droite */
-    .cart-btn{
-      position:absolute;
-      top:1rem;
-      right:1rem;
-      display:inline-flex;
-      align-items:center;
-      gap:.5rem;
-      background:rgba(255,255,255,0.08);
-      color:#fff;
-      border:0;
-      padding:.45rem .8rem;
-      border-radius:999px;
-      cursor:pointer;
-      backdrop-filter: blur(4px);
-      text-decoration:none;
-      font-weight:700;
-      height:40px;
-    }
-
-    .cart-btn:focus,
-    .cart-btn:hover{
-      background:rgba(255,255,255,0.14);
-      outline:2px solid rgba(255,255,255,0.12);
-      outline-offset:2px;
-    }
-
-    .cart-btn .cart-count{
-      background:var(--accent);
-      color:#072;
-      min-width:20px;
-      height:20px;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      border-radius:999px;
-      padding:0 6px;
-      font-size:.8rem;
-      font-weight:800;
     }
 
     form.search-form input[type="search"]{
@@ -137,7 +113,7 @@
       text-align:center;
     }
 
-    /* --- PRODUITS --- */
+    /* --- PRODUITS DISPONIBLES --- */
     h2.section-title{
       margin-top:3rem;
       text-align:center;
@@ -170,6 +146,12 @@
     .nom{font-size:1.15rem;font-weight:700;margin-top:.7rem}
     .prix{color:var(--primary);font-weight:700;margin-top:.3rem}
     .stock{color:#555;margin-top:.2rem}
+
+    /* --- PRODUITS INDISPONIBLES --- */
+    .indispo{
+      opacity:0.55;
+      filter:grayscale(100%);
+    }
 
     footer{
       text-align:center;
