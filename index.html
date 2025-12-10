@@ -22,12 +22,29 @@
       color:#071124;
     }
 
+    /* HEADER + LOGO */
     header{
       background:linear-gradient(90deg,var(--primary),#1e7a4d);
       color:#fff;
-      padding:2rem 1rem;
+      padding:2rem 1rem 2.5rem;
       text-align:center;
+      position:relative;
     }
+
+    /* --- GRAND LOGO EN HAUT À GAUCHE --- */
+    .logo{
+      position:absolute;
+      top:20px;
+      left:25px;
+    }
+
+    .logo img{
+      width:130px;       /* ⬅️ GROS LOGO */
+      height:auto;
+      border-radius:10px;
+      object-fit:contain;
+    }
+
     header h1{margin:0;font-size:2rem}
     header p{margin:.4rem 0 0;color:rgba(255,255,255,.95)}
 
@@ -96,7 +113,7 @@
       text-align:center;
     }
 
-    /* --- PRODUITS --- */
+    /* --- PRODUITS DISPONIBLES --- */
     h2.section-title{
       margin-top:3rem;
       text-align:center;
@@ -117,13 +134,6 @@
       box-shadow:0 6px 18px rgba(7,17,36,.06);
       padding:1rem;
       text-align:center;
-      opacity:1;
-    }
-
-    /* Indisponible = légèrement grisé */
-    .indispo{
-      opacity:0.55;
-      filter:grayscale(40%);
     }
 
     .produit-card img{
@@ -137,6 +147,12 @@
     .prix{color:var(--primary);font-weight:700;margin-top:.3rem}
     .stock{color:#555;margin-top:.2rem}
 
+    /* --- PRODUITS INDISPONIBLES --- */
+    .indispo{
+      opacity:0.55;
+      filter:grayscale(100%);
+    }
+
     footer{
       text-align:center;
       color:#6b7280;
@@ -148,6 +164,12 @@
 <body>
 
   <header>
+    
+    <!-- GRAND LOGO EN HAUT À GAUCHE -->
+    <div class="logo">
+      <img src="https://img.freepik.com/vecteurs-libre/logo-du-marche-agriculteurs-design-plat-dessine-main_23-2149336979.jpg" alt="Logo du Marché">
+    </div>
+
     <h1>Passer commande</h1>
     <p>Recherchez vos fruits et légumes et ajoutez-les à votre panier</p>
 
@@ -214,7 +236,7 @@
 
       <!-- Épinards -->
       <div class="produit-card">
-        <img src="https://tse3.mm.bing.net/th/id/OIP.aq50GikmxpJjc9hOi1pXogHaEv" alt="Épinards">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.aq50GikmxpJjc9hOi1pXogHaEv?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Épinards">
         <div class="nom">Épinards</div>
         <div class="stock">Stock : 12 kg</div>
         <div class="prix">3,20 € / botte</div>
@@ -222,7 +244,7 @@
 
       <!-- Oignons -->
       <div class="produit-card">
-        <img src="https://tse2.mm.bing.net/th/id/OIP.HiWsxSy8o0CBq6YJTACWnQHaE0" alt="Oignons">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.HiWsxSy8o0CBq6YJTACWnQHaE0?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Oignons">
         <div class="nom">Oignons</div>
         <div class="stock">Stock : 30 kg</div>
         <div class="prix">1,80 € / kg</div>
@@ -230,8 +252,8 @@
 
       <!-- Salades -->
       <div class="produit-card">
-        <img src="https://media.istockphoto.com/id/469159458/fr/photo/salade-de-laitue-isol%C3%A9-sur-fond-blanc.jpg" alt="Salade">
-        <div class="nom">Salade</div>
+        <img src="https://media.istockphoto.com/id/469159458/fr/photo/salade-de-laitue-isol%C3%A9-sur-fond-blanc.jpg?s=612x612&w=0&k=20&c=YazH9YL7EP4ifn4jdkce72E5YSTmL34ElfxBZBRBsx8=" alt="Salade">
+        <div class="nom">Salades</div>
         <div class="stock">Stock : 35 pièces</div>
         <div class="prix">1,50 € / pièce</div>
       </div>
@@ -255,54 +277,42 @@
     </div>
 
 
-    <!-- ---------------------------- -->
     <!-- SECTION PRODUITS INDISPONIBLES -->
-    <!-- ---------------------------- -->
-
     <h2 class="section-title">Produits indisponibles</h2>
 
     <div class="produits-grid">
 
       <!-- Fraises -->
       <div class="produit-card indispo">
-        <img src="https://th.bing.com/th/id/R.45757154895da6af94a501957239c682?rik=Ds1X1L%2bZdTCEqA&pid=ImgRaw&r=0" alt="Fraises">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.pP1Q7xR6QURNVewetPbUOgHaE8?rs=1&pid=ImgDetMain" alt="Fraises">
         <div class="nom">Fraises</div>
         <div class="stock">Stock : 0 kg</div>
-        <div class="prix">6,50 € / barquette</div>
+        <div class="prix">5,90 € / kg</div>
       </div>
 
       <!-- Melons -->
       <div class="produit-card indispo">
-        <img src="https://tse4.mm.bing.net/th/id/OIP.E1RCBOD40Vt0d7SP5bv9LgHaGV?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Melon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Cantaloupe_and_cross_section.jpg/640px-Cantaloupe_and_cross_section.jpg" alt="Melons">
         <div class="nom">Melons</div>
         <div class="stock">Stock : 0 pièce</div>
-        <div class="prix">4,20 € / pièce</div>
+        <div class="prix">3,80 € / pièce</div>
       </div>
 
-      <!-- Pastèque -->
+      <!-- Pastèques -->
       <div class="produit-card indispo">
-        <img src="https://tse3.mm.bing.net/th/id/OIP.A9xXMZ7h7Nn4eLvzd4nB9gHaE8?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Pastèque">
-        <div class="nom">Pastèque</div>
-        <div class="stock">Stock : 0 pièce</div>
-        <div class="prix">5,00 € / kg</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Watermelon.jpg" alt="Pastèque">
+        <div class="nom">Pastèques</div>
+        <div class="stock">Stock : 0</div>
+        <div class="prix">4,20 € / kg</div>
       </div>
 
       <!-- Aubergines -->
       <div class="produit-card indispo">
-        <img src="https://tse4.mm.bing.net/th/id/OIP.73A4-1Yac-WiuRuUT61JVwHaEy?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Aubergines">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Eggplants.jpg" alt="Aubergines">
         <div class="nom">Aubergines</div>
         <div class="stock">Stock : 0 kg</div>
-        <div class="prix">3,90 € / kg</div>
+        <div class="prix">3,70 € / kg</div>
       </div>
-
-      <!-- Haricots verts -->
-      <div class="produit-card indispo">
-        <img src="https://th.bing.com/th/id/R.f1bd9a54d9c25d464ffb243b64c0746e?rik=oWsTUduS8wN8JA&riu=http%3a%2f%2fimg-3.journaldesfemmes.com%2fxfeGvFYZpaINN-6XIMYHT0l2210%3d%2f910x607%2fsmart%2fb4809f1d5ee742e38b7238c7792fec5e%2fccmcms-jdf%2f10364894.jpg&ehk=6mBEyklj3aIs9ZO4pvtuqo49eDEjzKp%2bfH%2ftFRt8fwY%3d&risl=&pid=ImgRaw&r=0" alt="Haricots verts">
-        <div class="nom">Haricots verts</div>
-        <div class="stock">Stock : 0 kg</div>
-        <div class="prix">6,00 € / kg</div>
-      </div>
-
 
     </div>
 
