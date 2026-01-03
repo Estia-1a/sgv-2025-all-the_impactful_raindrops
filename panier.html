@@ -9,15 +9,15 @@
 <body>
 
   <div class="topbar">
-    <a href="index.html"> <- Revenir à l’accueil</a>
+    <a href="index.html">← Revenir à l’accueil</a>
     <div class="account">
-      <img src="https://cdn-icons-png.flaticon.com/512/742/742751.png">
+      <img src="https://cdn-icons-png.flaticon.com/512/742/742751.png" alt="Icône compte utilisateur">
       <span>Mon compte</span>
     </div>
   </div>
 
   <header>
-    <img src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png">
+    <img src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" alt="Icône panier">
     <h1>Mon panier</h1>
   </header>
 
@@ -35,42 +35,51 @@
       </div>
 
       <div class="item" data-price="3.50">
-        <img src="https://www.cuisinedecheznous.net/wp-content/uploads/2022/02/800x600-tomate-min.png">
+        <img src="https://www.cuisinedecheznous.net/wp-content/uploads/2022/02/800x600-tomate-min.png" alt="Tomates anciennes">
         <div class="item-info">
           <div class="item-name">Tomates anciennes</div>
           <div class="unit-price">3,50 € / kg</div>
         </div>
         <select class="qty">
-          <option>0</option><option>1</option><option>2</option><option>3</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
         </select>
         <div class="item-price">0 €</div>
-        <button class="remove-btn">✕</button>
+        <button type="button" class="remove-btn">✕</button>
       </div>
 
       <div class="item" data-price="2.80">
-        <img src="https://i.notrefamille.com/1800x0/smart/2018/03/15/339261-original.jpg">
+        <img src="https://i.notrefamille.com/1800x0/smart/2018/03/15/339261-original.jpg" alt="Pommes">
         <div class="item-info">
           <div class="item-name">Pommes</div>
           <div class="unit-price">2,80 € / kg</div>
         </div>
         <select class="qty">
-          <option>0</option><option>1</option><option>2</option><option>3</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
         </select>
         <div class="item-price">0 €</div>
-        <button class="remove-btn">✕</button>
+        <button type="button" class="remove-btn">✕</button>
       </div>
 
       <div class="item" data-price="1.20">
-        <img src="https://media.istockphoto.com/id/469159458/fr/photo/salade-de-laitue-isol%C3%A9-sur-fond-blanc.jpg">
+        <img src="https://media.istockphoto.com/id/469159458/fr/photo/salade-de-laitue-isol%C3%A9-sur-fond-blanc.jpg" alt="Salade verte">
         <div class="item-info">
           <div class="item-name">Salade</div>
           <div class="unit-price">1,20 € / pièce</div>
         </div>
         <select class="qty">
-          <option>0</option><option>1</option><option>2</option><option>3</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
         </select>
         <div class="item-price">0 €</div>
-        <button class="remove-btn">✕</button>
+        <button type="button" class="remove-btn">✕</button>
       </div>
     </section>
 
@@ -94,11 +103,11 @@
         <span id="total">0 €</span>
       </div>
 
-      <button class="checkout-btn" disabled>
+      <button type="button" class="checkout-btn" disabled>
         Valider mon panier
       </button>
 
-      <button class="clear-btn">
+      <button type="button" class="clear-btn">
         Vider mon panier
       </button>
 
